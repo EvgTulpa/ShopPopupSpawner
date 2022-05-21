@@ -19,7 +19,7 @@ public class A : MonoBehaviour
 ```c#
 public class B
 {
-  private int _playerCoins;
+  private int PlayerCoins;
 
   private void SomeMethod()
   {
