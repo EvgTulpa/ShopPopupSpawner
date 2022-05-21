@@ -15,7 +15,7 @@ public class A : MonoBehaviour
 }
 ```
 
-Using as regular class.<br>
+Using as c# class.<br>
 ```c#
 public class B
 {
