@@ -23,7 +23,11 @@ public class B
 
   private void SomeMethod()
   {
-      ShopPopupSpawnerData data = new ShopPopupSpawnerData(){Reason = PlayerCoins > 0 ? "rich" : "noMoney", Page = PlayerCoins > 0 ? 1 : 0};
+      ShopPopupSpawnerData data = new ShopPopupSpawnerData
+      {
+          Reason = MyReason,
+          Page = PlayerCoins > 0 ? 1 : 0
+      };
       ShopPopupSpawnerUtil.OpenShopPopup(data);
   }
 }
