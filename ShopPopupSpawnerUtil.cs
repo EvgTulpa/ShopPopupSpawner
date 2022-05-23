@@ -11,18 +11,18 @@ namespace Murka
             OpenSlotTracker.AddReason(payload);
             AdditionalTrackersParams.AddSaleGrope("buy_menu",payload);
             AdditionalTrackersParams.AddSaleMechanics("buy_menu",payload);
+            
             string promoType = OfferManager.Instance.GetActiveBuyMenuReskin() ?? "base";
-            if (data.Page == 1)
+            bool isCoinPage = page == 1;
+            string moneyType = isCoinPage ? "coins" : "gems";
+            string moneyTrackerType = isCoinPage ? StoreTrackers.STORE_OPEN_COINS : StoreTrackers.STORE_OPEN_GEMS;
+            if (isCoinPage)
             {
                 BillsTrackers.Instance.AddReason(payload);
-                AdditionalTrackersParams
-                    .AddPriceList<DefaultPriceListWithSubscriptionGenerator, List<PriceVO>>("coins", promoType, payload);
-                MurkaCore.Instance.Tracker.track(new TrackerVO(StoreTrackers.STORE_OPEN_COINS, "", payload));
-                return;
             }
 
-            AdditionalTrackersParams.AddPriceList<DefaultPriceListWithSubscriptionGenerator, List<PriceVO>>("gems", promoType, payload);
-            MurkaCore.Instance.Tracker.track(new TrackerVO(StoreTrackers.STORE_OPEN_GEMS, "", payload));
+            AdditionalTrackersParams.AddPriceList<DefaultPriceListWithSubscriptionGenerator, List<PriceVO>>(moneyType, promoType, payload);
+            MurkaCore.Instance.Tracker.track(new TrackerVO(moneyTrackerType, "", payload));
         }
     }
 }
