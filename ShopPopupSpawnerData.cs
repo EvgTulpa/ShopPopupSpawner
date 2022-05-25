@@ -7,6 +7,6 @@ namespace Murka
     {
         public string Reason = "scatterparty";
         public int Page = 1;
-        public bool PageType;
+        public bool CoinsPage;
     }
 }
