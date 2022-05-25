@@ -15,6 +15,11 @@ namespace Murka
         {
             ShopPopupSpawnerData.Page = value;
         }
+        
+        public void SetPageType(string value)
+        {
+            ShopPopupSpawnerData.PageType = value;
+        }
 
         public void OpenShopPopup()
         {
