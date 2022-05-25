@@ -24,5 +24,25 @@ namespace Murka
             AdditionalTrackersParams.AddPriceList<DefaultPriceListWithSubscriptionGenerator, List<PriceVO>>(moneyType, promoType, payload);
             MurkaCore.Instance.Tracker.track(new TrackerVO(moneyTrackerType, "", payload));
         }
+        
+        public static void OpenShopPopup(ShopPopupSpawnerData data)
+        {
+            Dictionary<string, object> payload = BuyPopupHelper.AddBuyPopup(data.Reason, data.CoinsPage ? 1 : 2, 0);
+            OpenSlotTracker.AddReason(payload);
+            AdditionalTrackersParams.AddSaleGrope("buy_menu",payload);
+            AdditionalTrackersParams.AddSaleMechanics("buy_menu",payload);
+            
+            string promoType = OfferManager.Instance.GetActiveBuyMenuReskin() ?? "base";
+            
+            string moneyType = data.CoinsPage ? "coins" : "gems";
+            string moneyTrackerType = data.CoinsPage ? StoreTrackers.STORE_OPEN_COINS : StoreTrackers.STORE_OPEN_GEMS;
+            if (data.CoinsPage)
+            {
+                BillsTrackers.Instance.AddReason(payload);
+            }
+
+            AdditionalTrackersParams.AddPriceList<DefaultPriceListWithSubscriptionGenerator, List<PriceVO>>(moneyType, promoType, payload);
+            MurkaCore.Instance.Tracker.track(new TrackerVO(moneyTrackerType, "", payload));
+        }
     }
 }
