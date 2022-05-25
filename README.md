@@ -3,9 +3,8 @@
 ```c#
 TopPanelController.Instance.ShopButton.SimulateClick();
 ```
-<br>
-<b>We do this</b><br><br>
-Using as ViewComponent in inspector.<br>
+<b>We do this</b><br>
+Using as ViewComponent in inspector.<br><br>
 
 ![1](https://user-images.githubusercontent.com/103635242/169654570-8ad15514-ebae-41d5-ae45-12bbd7775be5.png)
 
