@@ -22,7 +22,7 @@ namespace Murka
             }
 
             AdditionalTrackersParams.AddPriceList<DefaultPriceListWithSubscriptionGenerator, List<PriceVO>>(moneyType, promoType, payload);
-            MurkaCore.Instance.Tracker.track(new TrackerVO(moneyTrackerType, "", payload));
+            MurkaCore.Instance.Tracker.track(new TrackerVO(moneyTrackerType, string.Empty, payload));
         }
         
         public static void OpenShopPopup(ShopPopupSpawnerData data)
@@ -42,7 +42,7 @@ namespace Murka
             }
 
             AdditionalTrackersParams.AddPriceList<DefaultPriceListWithSubscriptionGenerator, List<PriceVO>>(moneyType, promoType, payload);
-            MurkaCore.Instance.Tracker.track(new TrackerVO(moneyTrackerType, "", payload));
+            MurkaCore.Instance.Tracker.track(new TrackerVO(moneyTrackerType, string.Empty, payload));
         }
     }
 }
