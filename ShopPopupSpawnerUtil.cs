@@ -25,6 +25,7 @@ namespace Murka
             MurkaCore.Instance.Tracker.track(new TrackerVO(moneyTrackerType, string.Empty, payload));
         }
         
+        //v2
         public static void OpenShopPopup(ShopPopupSpawnerData data)
         {
             bool isCoinPage = data.CoinsPage;
@@ -45,6 +46,7 @@ namespace Murka
             MurkaCore.Instance.Tracker.track(new TrackerVO(moneyTrackerType, string.Empty, payload));
         }
         
+        // v3
         public static void OpenShopPopup(ShopPopupSpawnerData data)
         {
             bool isCoinPage = data.IsCoinPage();
