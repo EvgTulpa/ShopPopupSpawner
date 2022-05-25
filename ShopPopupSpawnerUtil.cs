@@ -34,7 +34,6 @@ namespace Murka
             AdditionalTrackersParams.AddSaleMechanics("buy_menu",payload);
             
             string promoType = OfferManager.Instance.GetActiveBuyMenuReskin() ?? "base";
-            
             string moneyType = isCoinPage ? "coins" : "gems";
             string moneyTrackerType = isCoinPage ? StoreTrackers.STORE_OPEN_COINS : StoreTrackers.STORE_OPEN_GEMS;
             if (isCoinPage)
