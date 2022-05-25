@@ -1,4 +1,9 @@
 # Example:
+<b>Instead of this</b>
+```c#
+TopPanelController.Instance.ShopButton.SimulateClick();
+```
+<br>
 Using as ViewComponent in inspector.<br>
 
 ![1](https://user-images.githubusercontent.com/103635242/169654570-8ad15514-ebae-41d5-ae45-12bbd7775be5.png)
