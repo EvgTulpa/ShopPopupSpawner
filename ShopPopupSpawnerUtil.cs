@@ -7,7 +7,7 @@ namespace Murka
     {
         public static void OpenShopPopup(ShopPopupSpawnerData data)
         {
-            bool isCoinPage = data.CoinsPage;
+            bool isCoinPage = data.IsCoinsPage;
             
             Dictionary<string, object> payload = BuyPopupHelper.AddBuyPopup(data.Reason, isCoinPage ? 1 : 2, 0);
             OpenSlotTracker.AddReason(payload);
