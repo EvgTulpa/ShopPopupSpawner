@@ -11,14 +11,14 @@ namespace Murka
             ShopPopupSpawnerData.Reason = value;
         }
         
-        public void SetPage(int value)
+        public void SetCoinPage()
         {
-            ShopPopupSpawnerData.Page = value;
+            ShopPopupSpawnerData.IsCoinsPage = true;
         }
         
-        public void SetPageType(string value)
+        public void SetGemsPage()
         {
-            ShopPopupSpawnerData.PageType = value;
+            ShopPopupSpawnerData.IsCoinsPage = false;
         }
 
         public void OpenShopPopup()
