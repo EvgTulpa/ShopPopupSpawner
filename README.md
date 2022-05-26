@@ -6,7 +6,7 @@ TopPanelController.Instance.ShopButton.SimulateClick();
 <b>We do this</b><br>
 Using as ViewComponent in inspector.<br><br>
 
-![1](https://user-images.githubusercontent.com/103635242/169654570-8ad15514-ebae-41d5-ae45-12bbd7775be5.png)
+![2](https://user-images.githubusercontent.com/103635242/170462057-77afc436-b72f-4afa-8409-3dd4e646d9f0.png)
 
 ```c#
 public class A : MonoBehaviour
