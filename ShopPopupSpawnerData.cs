@@ -6,13 +6,6 @@ namespace Murka
     public class ShopPopupSpawnerData
     {
         public string Reason = "scatterparty";
-        public int Page = 1;
-        public bool CoinsPage;
-        public string PageType = "coins";
-        
-        public bool IsCoinPage()
-        {
-            retutn PageType == "coins";
-        }
+        public bool IsCoinsPage = true;
     }
 }
