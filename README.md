@@ -31,7 +31,7 @@ public class B
       ShopPopupSpawnerData data = new ShopPopupSpawnerData
       {
           Reason = PlayerCoins > 0 ? "rich" : "poor",
-          Page = PlayerCoins > 0 ? 1 : 2
+          IsCoinsPage = PlayerCoins > 0
       };
       ShopPopupSpawnerUtil.OpenShopPopup(data);
   }
